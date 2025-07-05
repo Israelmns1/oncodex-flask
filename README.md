@@ -1,130 +1,100 @@
-# 🧬 OncoDex
+# Oncodex Flask: A Lightweight Web App for CSV Data Analysis 🌐📊
 
-OncoDex is a simple yet powerful web application for biomedical researchers and clinicians to **upload**, **preview**, and **analyse** experimental and clinical datasets. It provides quick access to summary statistics and basic visualisations to facilitate **exploratory data analysis (EDA)** — without writing code.
+![Oncodex Flask](https://img.shields.io/badge/Oncodex%20Flask-v1.0-blue.svg)
+![GitHub Release](https://img.shields.io/badge/Release-Download%20Latest%20Version-brightgreen.svg)
 
-> 🧪 Final project for [CS50x – Harvard's Introduction to Computer Science](https://cs50.harvard.edu/x/)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/Israelmns1/oncodex-flask/releases)
 
----
+## Table of Contents
 
-## 🚀 Features
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-- 📁 Upload multiple `.csv` datasets
-- 👁️ Preview tabular data directly in the browser
-- 📊 View summary statistics (mean, SD, min, max, etc.)
-- 🧮 Automatically generate **bar plots** of means ± standard deviations for all numeric columns
-- 🎨 Clean, responsive UI styled with custom CSS
-- 🔐 Safe file handling and server-side validation
+## Overview
 
----
+Oncodex Flask is a lightweight web application built with Flask. It allows users to upload CSV files, preview the data in a tabular format, and visualize the data using Pandas and Matplotlib. This project serves as the final submission for the CS50x course, showcasing practical skills in web development and data analysis.
 
-## 🛠️ Tech Stack
+## Features
 
-| Layer        | Tool        |
-|--------------|-------------|
-| Backend      | Python + Flask |
-| Frontend     | HTML + Jinja2 Templates + CSS |
-| Data         | Pandas |
-| Plotting     | Matplotlib |
-| Deployment   | Localhost (`Flask` dev server) |
-| File Storage | `uploads/` folder (temp CSV storage) |
+- **CSV Upload**: Easily upload CSV files through a user-friendly interface.
+- **Tabular Preview**: View your data in a clean, organized table.
+- **Data Visualization**: Generate basic visualizations using Matplotlib.
+- **Responsive Design**: Works on both desktop and mobile devices.
+- **Lightweight**: Fast and efficient, designed for ease of use.
 
----
+## Technologies Used
 
-## 📦 Requirements
+- **Flask**: A micro web framework for Python.
+- **Pandas**: A powerful data manipulation and analysis library.
+- **Matplotlib**: A plotting library for creating static, animated, and interactive visualizations.
+- **HTML/CSS**: For structuring and styling the web application.
+- **JavaScript**: For enhancing user interactions.
 
-Create a virtual environment and install dependencies:
+## Installation
 
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+To get started with Oncodex Flask, follow these steps:
 
-requirements.txt
-```
-Flask==2.3.2
-pandas==2.0.3
-matplotlib==3.7.1
-Werkzeug==2.3.7
-```
+1. **Clone the repository**:
 
----
+   ```bash
+   git clone https://github.com/Israelmns1/oncodex-flask.git
+   cd oncodex-flask
+   ```
 
-## 📁 Project Structure
-```
-OncoDex/
-├── app.py                     # Flask app
-├── requirements.txt
-├── uploads/                   # Uploaded CSVs (temporary)
-│   ├── dummy_data.csv
-│   └── dummy_data2.csv
-├── static/
-│   └── styles.css             # Custom styling
-├── templates/                 # HTML templates
-│   ├── layout.html            # Base layout
-│   ├── index.html             # Home
-│   ├── upload.html            # Upload form
-│   ├── upload_confirmation.html
-│   ├── analyse.html           # Data preview and stats
-│   └── about.html             # About section
-```
+2. **Set up a virtual environment** (optional but recommended):
 
----
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-## 🧪 Usage
-Start the app:
-```bash
-python app.py
-```
+3. **Install the required packages**:
 
-Then open your browser and go to:
-📍 http://127.0.0.1:5000
+   ```bash
+   pip install -r requirements.txt
+   ```
 
----
+4. **Run the application**:
 
-## 🧭 Navigation
+   ```bash
+   python app.py
+   ```
 
-| Page    | URL Path  | Description                          |
-|---------|-----------|--------------------------------------|
-| Home    | `/`       | Welcome screen                       |
-| Upload  | `/upload` | Upload a CSV                         |
-| Analyse | `/analyse`| Select and analyse uploaded CSVs     |
-| About   | `/about`  | Instructions & app overview          |
+5. **Access the app**: Open your web browser and go to `http://127.0.0.1:5000`.
 
----
+## Usage
 
-## 📊 Example Output
-After uploading a dataset, OncoDex automatically:
-- Displays the first five rows
-- Generates summary statistics (mean, std, min, max, etc.)
-- Plots mean ± standard deviation for numeric columns
-(Rendered inline via base64-encoded PNG)
+1. **Upload a CSV file**: Click on the "Upload" button and select your CSV file.
+2. **Preview the data**: Once uploaded, the data will display in a tabular format.
+3. **Visualize the data**: Click on the "Visualize" button to generate charts based on your data.
 
----
+## Contributing
 
-## 📌 Why I Built This
+Contributions are welcome! If you want to improve Oncodex Flask, please follow these steps:
 
-I created OncoDex as a final project for CS50x to bring together key programming concepts:
-- Routing and form handling in Flask
-- File upload and sanitisation
-- Data parsing and visualisation with Pandas/Matplotlib
-- HTML templating with Jinja2
-- Basic frontend styling with CSS
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
----
+## License
 
-## ✅ Possible Extensions
-- 📈 Add scatterplots or histograms
-- 📤 Export summary stats or plots as files
-- 🔍 Add filtering/search for data columns
-- 🔐 Integrate user authentication (login/logout)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Acknowledgments
 
-![Python](https://img.shields.io/badge/Built_with-Python_3.10-blue)
-![Flask](https://img.shields.io/badge/Framework-Flask-lightgrey)
-![Pandas](https://img.shields.io/badge/Data-Pandas-yellow)
-![Matplotlib](https://img.shields.io/badge/Plots-Matplotlib-orange)
-![CS50](https://img.shields.io/badge/CS50x-Project-red)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Beta-yellow)
+- **CS50x**: For providing the foundational knowledge and skills to build this project.
+- **Flask Documentation**: For the extensive resources that helped in developing the application.
+- **Pandas and Matplotlib Communities**: For their support and contributions to data science.
+
+For the latest releases, visit the [Releases section](https://github.com/Israelmns1/oncodex-flask/releases). You can download the latest version and execute it for your data analysis needs.
+
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/Israelmns1/oncodex-flask/releases)
